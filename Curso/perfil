@@ -1,0 +1,183 @@
+<?php
+include("conexion/conexionbd.php");
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+session_start();
+echo $_SESSION['id_usuario'];
+if (!isset($_SESSION['id_usuario'])) {
+  header("Location: index.php");
+}
+/*Mostrar Informacion de Usuario*/
+
+$iduser=$_SESSION['id_usuario'];
+$sql ="SELECT u.Idusuario,u.NombreU,u.PasswordU, a.IdAlumno, a.NombreA, a.TelefonoA, a.GeneroA, a.CorreoA FROM usuarios AS u INNER JOIN alumno AS a ON u.IdAlumno = a.IdAlumno
+    WHERE u.Idusuario= '$iduser'";
+  $resultado = $conexion->query($sql);
+  $filas = $resultado->num_rows;
+  $row = $resultado->fetch_assoc();
+   while ($row = $result->fetch_assoc()) 
+  
+if ($filas>0) {
+    $row = $resultado->fetch_assoc();
+  }
+
+?>
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content=" CRUD en PHP y Mysql - Registro de usuarios y asignaturas">
+<meta name="author" content="Jairo Galeas">
+<link rel="icon" href="../../../../favicon.ico">
+
+<title>Perfil de Usuario</title>
+
+
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link href="jumbotron.css" rel="stylesheet">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+
+
+<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+<ul class="navbar-nav mr-auto">
+    <?php require_once("menusuperior.php"); ?>
+  <?php
+      if($_SESSION['tipo_usuario']==1){
+  ?>
+       <li class="nav-item">
+       <a class="nav-link" href="listausuarios.php">Lista de Usuarios</a>
+      </li> 
+  <?php } ?>
+
+</ul>
+ <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <?php echo utf8_decode($row['NombreU']);?>
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="perfil.php">Perfil</a>
+    <a class="dropdown-item" href="salir.php">Cerrar</a>
+  </div>
+</div>
+</div>
+</nav>
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+  <div class="container">
+   
+<h3><center>Perfil de Usuario</center></h3>
+
+      <hr>
+
+<form action=" <?php $_SERVER["PHP_SELF"]; ?> " method="POST">
+       <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputNombreA" class="col-form-label">Nombre del Alumno</label>
+              <input type="text" class="form-control" id="inputNombreA"  name="nombrelumno" value="<?php echo $row ['NombreA'];?>">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputUser" class="col-form-label">Usuario</label>
+              <input type="text" class="form-control" id="inputUser" name="user" value="<?php echo $row ['NombreU'];?>">
+            </div>
+        </div>
+        
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputTelefono" class="col-form-label">Telefono</label>
+              <input type="tel" class="form-control" id="inputTelefono"  name="telefono" value="<?php echo $row ['TelefonoA'];?>">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="exampleFormControlSelect1">Genero</label>
+              <select class="form-control" id="exampleFormControlSelect1" name="genero" value="<?php echo $row ['NombreA'];?>">
+                <option <?php echo $row['GeneroA']==='Masculino' ? "selected='selected'":""?> value="Masculino">Masculino</option>
+                <option <?php echo $row['GeneroA']==='Femenino' ? "selected='selected'":""?> value="Femenino">Femenino</option>
+
+              </select>
+            </div>
+        </div>
+       <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputEmail4" class="col-form-label">Email</label>
+              <input type="email" class="form-control" id="inputEmail4"  name="email" value="<?php echo $row ['CorreoA'];?>">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputPassword4" class="col-form-label">Password</label>
+              <input type="password" class="form-control" id="inputPassword4"  name="pass" value="<?php echo $row ['NombreA'];?>">
+            </div>
+        </div>
+              <input type="hidden" name="ID" value="<?php echo $iduser;?>">
+        <button type="submit" class="btn btn-primary" name="editar">Actualizar</button>
+      </form>
+             <?php 
+  if(isset($_REQUEST["editar"])){
+    $nombrelumno=$_POST["nombrelumno"];
+    $user=$_POST["user"];
+    $telefono=$_POST["telefono"];
+    $genero=$_POST["genero"];
+    $email=$_POST["user"];
+    $id=$_POST["ID"];
+    if ($_POST["pass"]==""){      
+    $password=$row['PasswordU'];
+    }else{
+     $password= sha1($_POST["pass"]); 
+    }
+    
+    $sqlmodificar="UPDATE asignaturas as u INNER JOIN alumno as a ON(u.IdAlumno=a.IdAlumno)
+                    SET 
+                    u.NombreU='$user',
+                    u.PasswordU='$password',
+                    a.NombreA='$nombrelumno',
+                    a.TelefonoA='$telefono',
+                    a.GeneroA='$genero',
+                    a.CorreoA='$email'
+                  WHERE u.Idusuario='$id'";
+                  
+   $modificado=$conexion->query($sqlmodificar);
+   if($modificado>0){
+        echo "<script>
+        alert('Registro Modificado');
+        window.location='perfil.php';
+        </script>";
+      }else{
+        echo "<script>
+        alert('Error al Modificar');
+        window.location='perfil.php';
+        </script>";
+      }
+  }
+  $conexion->close();
+  ?>
+             
+
+  </div>
+</div>
+
+
+<hr>
+
+<footer>
+  <?php require_once("piedepagina.php"); ?>
+</footer>
+</div> <!-- /container -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../../../../assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>

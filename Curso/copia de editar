@@ -1,0 +1,79 @@
+
+<?php
+include("conexion/conexionbd.php");
+$ID=$_GET['id'];
+
+$materias="SELECT idasignaturas,codigoasignatura,nombreasignatura,nota
+                  FROM asignaturas WHERE idasignaturas='$ID'";               
+$resultadomateria=$conexion->query($materias);
+$filas=$resultadomateria->fetch_assoc(); 
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>Asignaturas</title>
+</head>
+<body>
+<h3><center>Modificar Asignaturas</center></h3>
+<form action="<?php $_SERVER["PHP_SELF"]?>" method="POST">
+      Codigo: <input type="text" name="cod" value="<?php echo $filas['codigoasignatura'];?>">
+
+      Asignatura: <input type="text" name="nom" value="<?php echo $filas['nombreasignatura'];?>">
+
+      Nota: <input type="number" name="nota" value="<?php echo $filas['nota'];?>">
+          <input type="hidden" name="ID" value="<?php echo $ID;?>">
+          <input type="submit" name="editar" value="Modificar">
+      </form>
+  <?php 
+  if(isset($_REQUEST["editar"])){
+    $cod=$_REQUEST["cod"];
+    $materias=$_REQUEST["nom"];
+    $nota=$_REQUEST["nota"];
+    $id=$_REQUEST["ID"];
+    $sqlModificar="UPDATE asignaturas SET codigoasignatura='$cod',
+                                          nombreasignatura='$materias',
+                                          nota='$nota'
+                  WHERE idasignaturas='$id'";
+                  
+   $modificado=$conexion->query($sqlModificar);
+   if($modificado>0){
+        echo "<script>
+        alert('Registro Modificado Exitosamente');
+        window.location='index.php';
+        </script>";
+      }else{
+        echo "<script>
+        alert('Error al Modificar');
+        window.location='index.php';
+        </script>";
+      }
+  }
+  $$conexion->close();
+  ?>
+      
+</body>
+</html>
+
+
+
+$filas = $resultado->num_rows;
+    $row= null;
+if ($filas>0) {}
+
+
+
+
+
+
+<h3><center>Registro de Asignaturas</center></h3>
+<form action="<?php $_SERVER["PHP_SELF"]?>" method="POST">
+      Codigo: <input type="text" name="cod" placeholder="CD101" required>
+
+      Asignatura: <input type="text" name="nom" placeholder="Programacion" required>
+
+      Nota: <input type="number" name="nota" placeholder="99" required>
+
+      <input type="submit" name="guardar" value="Guardar" class="btn btn-primary">
+      </form>

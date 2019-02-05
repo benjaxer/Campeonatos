@@ -1,0 +1,9 @@
+<?php
+$Server = "localhost";
+$user = "root";
+$pass = "kakaroto";
+$bd = "misasignaturas";
+?>
+
+
+
