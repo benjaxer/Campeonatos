@@ -47,7 +47,7 @@
   <!-- Main jumbotron for a primary marketing message or call to action -->
   <div class="jumbotron">
     <div class="container">
-      <h1 class="display-3">Bienvenidos Jugadores!! uyghkjhkjh</h1>
+      <h1 class="display-3">Bienvenidos Jugadores!!</h1>
       
     </div>
   </div>
