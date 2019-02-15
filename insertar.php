@@ -69,7 +69,7 @@ ini_set('display_errors', 1);
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Registrar</title>
+    <title>Registrar Nuevos Jugadores</title>
 
     <!-- Bootstrap core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet"in tegrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
