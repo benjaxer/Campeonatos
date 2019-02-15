@@ -15,8 +15,8 @@ include("conexion.php");
     <meta name="generator" content="Jekyll v3.8.5">
     <title>Campeonatos</title>
 
-    <!-- Bootstrap core CSS -->
-<link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+ <!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
 
 
     <style>
@@ -33,6 +33,7 @@ include("conexion.php");
     </style>
     <!-- Custom styles for this template -->
     <link href="jumbotron.css" rel="stylesheet">
+
 
   </head>
   <body>

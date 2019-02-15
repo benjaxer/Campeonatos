@@ -34,16 +34,19 @@ $sumagoles = ($jugador['goles'] + $tiros);
                       email = '$correo'";
   
   $existepersona=$conexion->query($update); 
+
     echo "<script>
         alert('Registro Modificado');
         window.location='admin.php';
         </script>";
-  } 
-  else{
+  }else{
         $sqlpartido="INSERT INTO campeonato(nombre,semana,tipocampeonato,goles,email)
                      VALUES('$apodo','$semanario','$tcampeonato','$tiros','$correo')";
-
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
         $resultado=$conexion->query($sqlpartido);
+       
+        
         if($resultado>0){
         echo "<script>
         alert('Exito');
@@ -56,7 +59,6 @@ $sumagoles = ($jugador['goles'] + $tiros);
         </script>";
           }
       }
-
 }
    ?>
 <!doctype html>
@@ -70,7 +72,7 @@ $sumagoles = ($jugador['goles'] + $tiros);
     <title>Registrar</title>
 
     <!-- Bootstrap core CSS -->
-<link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<link href="css/bootstrap.min.css" rel="stylesheet"in tegrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
 
     <style>
