@@ -8,20 +8,35 @@
     <meta name="generator" content="Jekyll v3.8.5">
     <title>Entrada</title>
 
+<link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/carousel/">
     <!-- Bootstrap core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
+<style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
 
-
-
-    <!-- Custom styles for this template -->
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+   <!-- Custom styles for this template -->
     <link href="css/carousel.css" rel="stylesheet">
     
   </head>
   <body>
+   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  
-  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+       
+ <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav mr-auto">
       
 	</ul>
@@ -31,12 +46,11 @@
     </form>
   </div>
 </nav>
-
+   </header>
 <main role="main">
 
   <!-- Main jumbotron for a primary marketing message or call to action -->
-  <div class="jumbotron">
-    <div class="container">
+
       <h1 class="display-3">Bienvenidos Jugadores!!</h1>
       </div>
       </div>
@@ -61,7 +75,7 @@
       <div class="carousel-item">
         <img class="d-block w-100" src="img/fifa2.jpg" alt="Second slide">
         <div class="container">
-          <div class="carousel-caption">
+          <div class="carousel-caption text-left">
             <h1 style="color:black;">Semanas.</h1>         
             
           </div>
@@ -70,7 +84,7 @@
       <div class="carousel-item">
         <img class="d-block w-100" src="img/fifa1.jpg" alt="Third slide">
         <div class="container">
-          <div class="carousel-caption text-right">
+          <div class="carousel-caption">
             <h1 style="color:black;">Campeonatos.</h1>
             
           </div>
@@ -84,21 +98,18 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Siguiente</span>
     </a>
-
-  
+    </div>
+   <hr></hr>
    <!-- /container -->
 
 </main>
- <hr></hr>
-
-<footer class="container">
+ <footer class="container">
 <?php require_once("piedepagina.php"); ?>
 </footer>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script>window.jQuery || document.write('<script src="/docs/4.2/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 <script src="js/bootstrap.bundle.min.js"></script>
 <script type=”text/javascript” language=”javascript” src=”./media/js/jquery.js”></script>
-<script type=”text/javascript” language=”javascript” src=”./media/js/jquery.dataTables.js”></script>
 </body>
 </html>
 
