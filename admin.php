@@ -50,16 +50,20 @@ include("conexion.php");
 <main role="main">
 
   <!-- Main jumbotron for a primary marketing message or call to action -->
-  <div class="jumbotron">
-    <div class="container">
       <h1 class="display-3">Lista de Jugadores!</h1>
     </div>
   </div>
-<form>     
-        
-  </form>
+
 <hr>
-<table id="example" class="table table-striped table-bordered" style="width:100%">
+
+  <div class="container-fluid">
+  <div class="row">
+  <div class="col-sm-1"></div>
+
+  <div class="col-lg-10">
+    <table id="example" class="table table-striped table-bordered" style="width:100%">
+
+
        <thead>
         <tr> 
             <th>IdPersona</th>
@@ -85,7 +89,7 @@ include("conexion.php");
                 <td>".$registros['goles']."</td>
                 <td>".$registros['email']."</td>
                 <td><a href='editar.php?id=".$registros['Idcampeonato']."' class='btn btn-warning'>Editar</a>
-                &nbsp;
+                &nbsp &nbsp &nbsp;
                 <a href='eliminar.php?id=".$registros['Idcampeonato']."' class='btn btn-danger'>Eliminar</a></td>
 
              </tr>";
@@ -105,13 +109,13 @@ include("conexion.php");
                       
             </tr>
         </tfoot>
+    </table></div>
+  <div class="col-sm-1"></div>
+</div>
+</div>
+   
 
-
-    </table>
-
-    <hr>
-
-  </div> <!-- /container -->
+   <!-- /container -->
 
 </main>
 
