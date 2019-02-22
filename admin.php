@@ -67,9 +67,10 @@ include("conexion.php");
              <th>Semana</th>  
              <th>TipoC</th>
              <th>Goles</th> 
-             <th>Email</th>  
-             <th>Editar</th>
-             <th>Eliminar</th>
+             <th>Email</th>
+             <th>Opciones</th> 
+                            
+        
         </tr>
           
    </thead>
@@ -83,13 +84,16 @@ include("conexion.php");
                 <td>".$registros['tipocampeonato']."</td>
                 <td>".$registros['goles']."</td>
                 <td>".$registros['email']."</td>
-                <td><a href='editar.php?id=".$registros['Idcampeonato']."'>Editar</a></td>
-                <td><a href='eliminar.php?id=".$registros['Idcampeonato']."'>Eliminar</a></td>
+                <td><a href='editar.php?id=".$registros['Idcampeonato']."' class='btn btn-warning'>Editar</a>
+                &nbsp;
+                <a href='eliminar.php?id=".$registros['Idcampeonato']."' class='btn btn-danger'>Eliminar</a></td>
+
              </tr>";
           }
     ?>
    </tbody>
         <tfoot>
+
             <tr>
                <th>IdPersona</th>
              <th>Nombre</th>
@@ -97,10 +101,12 @@ include("conexion.php");
              <th>TipoC</th>
              <th>Goles</th> 
              <th>Email</th>
-             <th>Editar</th>
-             <th>Eliminar</th>           
+             <th>Opciones</th>
+                      
             </tr>
         </tfoot>
+
+
     </table>
 
     <hr>
