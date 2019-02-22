@@ -50,7 +50,9 @@ include("conexion.php");
 <main role="main">
 
   <!-- Main jumbotron for a primary marketing message or call to action -->
+  <br>
       <h1 class="display-3">Lista de Jugadores!</h1>
+
     </div>
   </div>
 
@@ -114,7 +116,7 @@ include("conexion.php");
 </div>
 </div>
    
-
+<hr>
    <!-- /container -->
 
 </main>
