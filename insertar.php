@@ -96,7 +96,7 @@ ini_set('display_errors', 1);
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
     <?php require_once("menusuperior3.php"); ?>
-	</ul>
+  </ul>
     </ul>
     <form class="form-inline my-2 my-lg-0" action="<?php $_SERVER["PHP_SELF"];?>" method="POST">
     </form>
@@ -165,9 +165,8 @@ ini_set('display_errors', 1);
 
 <footer class="container">
 
-	</ul>
+  </ul>
 </footer>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/docs/4.2/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="js/bootstrap.bundle.min.js" integrity="sha384-zDnhMsjVZfS3hiP7oCBRmfjkQC4fzxVxFhBx8Hkz2aZX8gEvA/jsP3eXRCvzTofP" crossorigin="anonymous"></script></body>
 </html>
-

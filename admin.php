@@ -8,16 +8,17 @@ include("conexion.php");
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.5">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+      <meta name="generator" content="Jekyll v3.8.5">
     <title>Campeonatos</title>
 
  <!-- Bootstrap core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
-
+ <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+  <style type="text/css" class="init">
 
     <style>
       .bd-placeholder-img {
@@ -34,7 +35,6 @@ include("conexion.php");
     <!-- Custom styles for this template -->
     <link href="jumbotron.css" rel="stylesheet">
 
-
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -42,8 +42,8 @@ include("conexion.php");
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <?php require_once("menusuperior2.php");?>
-	</ul>
-    </ul>
+	  </ul>
+    
     
   </div>
 </nav>
@@ -60,8 +60,8 @@ include("conexion.php");
         
   </form>
 <hr>
-<center><table class="table table">
-   <thead>
+<table id="example" class="table table-striped table-bordered" style="width:100%">
+       <thead>
         <tr> 
             <th>IdPersona</th>
              <th>Nombre</th>
@@ -72,6 +72,7 @@ include("conexion.php");
              <th>Editar</th>
              <th>Eliminar</th>
         </tr>
+          
    </thead>
    <tbody>
      <?php
@@ -89,8 +90,19 @@ include("conexion.php");
           }
     ?>
    </tbody>
-</center></table>
- 
+        <tfoot>
+            <tr>
+               <th>IdPersona</th>
+             <th>Nombre</th>
+             <th>Semana</th>  
+             <th>TipoC</th>
+             <th>Goles</th> 
+             <th>Email</th>
+             <th>Editar</th>
+             <th>Eliminar</th>           
+            </tr>
+        </tfoot>
+    </table>
 
     <hr>
 
@@ -100,8 +112,20 @@ include("conexion.php");
 
 <footer class="container">
 <?php require_once("piedepagina.php"); ?>
-	</ul>
+	
 </footer>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/docs/4.2/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="js/bootstrap.bundle.min.js" integrity="sha384-zDnhMsjVZfS3hiP7oCBRmfjkQC4fzxVxFhBx8Hkz2aZX8gEvA/jsP3eXRCvzTofP" crossorigin="anonymous"></script></body>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.dataTables.min.js"></script>
+<script src="js/dataTables.bootstrap.min.js"></script>
+<script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#example').DataTable();
+} );
+</script>
+
+
+</body>
 </html>
