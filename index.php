@@ -17,27 +17,25 @@
     
   </head>
   <body>
+
    <header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-       
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark"> 
+      <a class="navbar-brand" href="admin.php">Ingresar</a>
+
+
  <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav mr-auto">
       
 	</ul>
     </ul>
     <form class="form-inline my-2 my-lg-0" action="<?php $_SERVER["PHP_SELF"];?>" method="POST">
-    <br><a href="admin.php">Ingresar</a>
     </form>
-  </div>
-</nav>
    </header>
 <main role="main">
 
   <!-- Main jumbotron for a primary marketing message or call to action -->
 
       <h1 class="display-3">Bienvenidos Jugadores!!</h1>
-      </div>
-      </div>
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>

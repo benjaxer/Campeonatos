@@ -37,10 +37,11 @@ include("conexion.php");
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  
+    <a class="navbar-brand" href="insertar.php">Agregar Jugadores</a>
+      <a class="navbar-brand" href="index.php">Atras</a>
+
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
-      <?php require_once("menusuperior2.php");?>
 	  </ul>
     
     
@@ -50,7 +51,7 @@ include("conexion.php");
 <main role="main">
 
   <!-- Main jumbotron for a primary marketing message or call to action -->
-  <br>
+  <br><br><br>
       <h1 class="display-3">Lista de Jugadores!</h1>
 
     </div>
