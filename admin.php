@@ -51,7 +51,7 @@ include("conexion.php");
 <main role="main">
 
   <!-- Main jumbotron for a primary marketing message or call to action -->
-  <br><br><br>
+  <br><br>
       <h1 class="display-3">Lista de Jugadores!</h1>
 
     </div>
@@ -112,8 +112,9 @@ include("conexion.php");
                       
             </tr>
         </tfoot>
-    </table></div>
-  <div class="col-sm-1"></div>
+    </table>
+  </div>
+<div class="col-sm-1"></div>
 </div>
 </div>
    

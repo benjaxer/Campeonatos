@@ -57,6 +57,7 @@ $filas=$resultado->fetch_assoc();
   <!-- Main jumbotron for a primary marketing message or call to action -->
   <div class="jumbotron">
     <div class="container">
+       <br>
       <h1 class="display-3">Modificar Jugadores</h1>
     </div>
   </div>
@@ -88,12 +89,12 @@ $filas=$resultado->fetch_assoc();
       <div class="form-group col-md-6">
         <label for="inputPassword4">Email</label>
         <input type="email" name="mail" class="form-control" value="<?php echo $filas['email'];?>">
-      </div>
-      <div>
-      <input type="hidden" name="id" value="<?php echo $id;?>">
-      <input type="submit" name="editar" value="Modificar jugador">
-     </div>
-
+   </div>
+   <div>
+    <input type="hidden" name="id" value="<?php echo $id;?>">
+   </div>
+ <hr class="mb-4">
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Modificar Jugador</button> 
 
 </form>
 

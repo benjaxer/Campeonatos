@@ -109,6 +109,7 @@ ini_set('display_errors', 1);
   <!-- Main jumbotron for a primary marketing message or call to action -->
   <div class="jumbotron">
     <div class="container">
+      <br>
       <h1 class="display-3">Agregar Jugadores</h1>
 
 
@@ -118,6 +119,13 @@ ini_set('display_errors', 1);
  
 
     <hr>
+     <div class="container-fluid">
+  <div class="row">
+  <div class="col-sm-0"></div>
+
+
+  <div class="col-lg-12">
+    <table id="example" class="table table-striped table-bordered" style="width:100%">
 <form action="<?php $_SERVER["PHP_SELF"]?>" method="POST">
     
       <div class="form-row">
@@ -143,12 +151,9 @@ ini_set('display_errors', 1);
       </div>
       <div>
       <input type="hidden" name="ID" value="<?php echo $id;?>">
-      <input type="submit" name="guardar" value="Agregar jugador">
      </div>
-
-
-
-      
+     <hr class="mb-4">
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Agregar Jugador</button>      
 
 </form>
     <?php
@@ -159,7 +164,10 @@ ini_set('display_errors', 1);
           }
   $conexion->close();
     ?>
-
+</div>
+<div class="col-sm-0"></div>
+</div>
+</div>
   </div> <!-- /container -->
 
 </main>
