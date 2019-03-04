@@ -1,1 +1,1 @@
-<p>&copy; Company 2017-2018</p>
+<p>&copy; Company 2017-2018 Solutoria SPA</p>

@@ -133,10 +133,9 @@ ini_set('display_errors', 1);
   ?>
 
 </main>
-
+<hr>
 <footer class="container">
-
-	</ul>
+<?php require_once("piedepagina.php"); ?>
 </footer>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script>window.jQuery || document.write('<script src="/docs/4.2/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
