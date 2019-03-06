@@ -13,6 +13,7 @@ include("conexion.php");
       <meta name="description" content="">
       <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
       <meta name="generator" content="Jekyll v3.8.5">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <title>Campeonatos</title>
 
  <!-- Bootstrap core CSS -->
@@ -33,8 +34,23 @@ include("conexion.php");
       }
     </style>
     <!-- Custom styles for this template -->
-
   </head>
+<script type="text/javascript">
+   function ConfirmDelete()
+   {
+    var respuesta = confirm("Estas seguro que deseas Eliminar al Usuario?");
+
+  if(respuesta == true)
+  {
+    return true;
+  } 
+  else
+  {
+     return false;
+  }
+}
+ 
+</script>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <a class="navbar-brand" href="insertar.php">Agregar Jugadores</a>
@@ -91,10 +107,9 @@ include("conexion.php");
                 <td>".$registros['tipocampeonato']."</td>
                 <td>".$registros['goles']."</td>
                 <td>".$registros['email']."</td>
-                <td><a href='editar.php?id=".$registros['Idcampeonato']."' class='btn btn-warning'>Editar</a>
+                <td><a href='editar.php?id=".$registros['Idcampeonato']."'<i class='fas fa-edit'></i>Editar</a>
                 &nbsp &nbsp &nbsp;
-                <a href='eliminar.php?id=".$registros['Idcampeonato']."' class='btn btn-danger'>Eliminar</a></td>
-
+                <a href='confirmar.php?id=".$registros['Idcampeonato']."'<i class='fas fa-trash' onclick='return ConfirmDelete()'></i>Eliminar</a></td>
              </tr>";
           }
     ?>

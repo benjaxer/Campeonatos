@@ -42,8 +42,6 @@ $sumagoles = ($jugador['goles'] + $tiros);
   }else{
         $sqlpartido="INSERT INTO campeonato(nombre,semana,tipocampeonato,goles,email)
                      VALUES('$apodo','$semanario','$tcampeonato','$tiros','$correo')";
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
         $resultado=$conexion->query($sqlpartido);
        
         
@@ -88,7 +86,6 @@ ini_set('display_errors', 1);
       }
     </style>
     <!-- Custom styles for this template -->
-    <link href="jumbotron.css" rel="stylesheet">
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -134,11 +131,7 @@ ini_set('display_errors', 1);
         <input type="text" name="nom" class="form-control"  placeholder="Nombres" title="Rellene este Campo" required>
       </div>
       <div class="form-group col-md-6">
-        <label for="inputPassword4">Agregar Semana</label>
-        <input type="text" min="0" max="52" name="sem" class="form-control" placeholder="Semana" title="Rellene este Campo" required>
-      </div>
-     <div class="form-group col-md-6">
-      <label for="inputEmail4">Campeonato</label>
+        <la  <label for="inputEmail4">Campeonato</label>
       <input type="text" class="form-control"  name="tcam" placeholder="Campeonato" title="Rellene este Campo" required>
       </div>
       <div class="form-group col-md-6">
@@ -150,11 +143,11 @@ ini_set('display_errors', 1);
         <input type="email" name="mail" class="form-control" placeholder="Emails" title="Rellene este Campo" required>
       </div>
       <div>
-      <input type="hidden" name="ID" value="<?php echo $id;?>">
+      <input type="hidden" name="id" value="<?php echo $id;?>">
      </div>
      <hr class="mb-4">
             <button class="btn btn-primary btn-lg btn-block" type="submit">Agregar Jugador</button>      
-
+   </div>
 </form>
     <?php
     $sql="SELECT Idcampeonato,nombre,semana,tipocampeonato,goles,email
@@ -175,6 +168,8 @@ ini_set('display_errors', 1);
 <footer class="container">
 <?php require_once("piedepagina.php"); ?>
 </footer>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/docs/4.2/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="js/bootstrap.bundle.min.js" integrity="sha384-zDnhMsjVZfS3hiP7oCBRmfjkQC4fzxVxFhBx8Hkz2aZX8gEvA/jsP3eXRCvzTofP" crossorigin="anonymous"></script></body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.2/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="js/bootstrap.bundle.min.js"></script>
+ </body>
 </html>

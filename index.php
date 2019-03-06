@@ -7,7 +7,7 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
     <title>Entrada</title>
-
+<link rel="stylesheet" type="text/css" href="CssLetras.css">
 <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/carousel/">
     <!-- Bootstrap core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -34,8 +34,8 @@
 <main role="main">
 
   <!-- Main jumbotron for a primary marketing message or call to action -->
+     <center><h1 class="display-3">Bienvenidos Jugadores!!</h1></center>
 
-      <h1 class="display-3">Bienvenidos Jugadores!!</h1>
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -77,6 +77,31 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
+    <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4">
+        <img class="bd-placeholder-img rounded-circle" width="150" height="150" src="img/solutoria.png" alt="Third slide">
+        <h2>Solutoria Spa</h2>
+        <p>Patrocinado por "SOLUTORIA SPA" Sumamos soluciones a tu negocio.</p>
+        
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+         <img class="bd-placeholder-img rounded-circle" width="150" height="150" src="img/copafifa.jpg" alt="Third slide">
+        <h2>Campeonato Fifa</h2>
+        <p>La Copa Mundial de la FIFA, también conocida como Copa Mundial de Fútbol, es el principal torneo internacional oficial de fútbol masculino a nivel de selecciones nacionales en el mundo.</p>
+       
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img class="bd-placeholder-img rounded-circle" width="150" height="150" src="img/pelotafifa.jpg" alt="Third slide">
+        <h2>Campeonatos</h2>
+        <p>Un campeonato es una competición, un certamen o un torneo en que se disputa un premio. Quien termina en el primer puesto y resulta ganador del campeonato es el campeón.</p>
+        
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
    <hr></hr>
    <!-- /container -->
 

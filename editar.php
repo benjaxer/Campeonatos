@@ -18,7 +18,7 @@ $filas=$resultado->fetch_assoc();
     <title>Jugadores</title>
 
     <!-- Bootstrap core CSS -->
-<link href="css/bootstrap.min.css" rel="stylesheet" in tegrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<link href="css/bootstrap.min.css" rel="stylesheet">
 
 
     <style>
@@ -89,16 +89,14 @@ $filas=$resultado->fetch_assoc();
       <div class="form-group col-md-6">
         <label for="inputPassword4">Email</label>
         <input type="email" name="mail" class="form-control" value="<?php echo $filas['email'];?>">
+        <br>
+      </div>
    </div>
    <div>
-    <input type="hidden" name="id" value="<?php echo $id;?>">
-   </div>
- <hr class="mb-4">
-            <button class="btn btn-primary btn-lg btn-block" type="submit">Modificar Jugador</button> 
-
+    <input  type="hidden" name="id" value="<?php echo $id;?>">
+            <button class="btn btn-primary btn-lg btn-block" name="editar" type="submit"> Modificar Jugador</button>  
+ </div>
 </form>
-
-  </div> <!-- /container -->
    <?php 
   if(isset($_POST["editar"])){
     $nombre=$_POST["nom"]; 
