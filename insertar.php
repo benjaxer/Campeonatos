@@ -136,7 +136,7 @@ $sumagoles = ($jugador['goles'] + $tiros);
       </div>
       <div class="form-group col-md-6">
         <label for="inputPassword4">Goles</label>
-        <input type="number" name="gol" value="0" class="form-control"  placeholder="Goles" title="Rellene este Campo" required>
+        <input type="number" min="0" max="50" name="gol" value="0" class="form-control"  placeholder="Goles" title="Rellene este Campo" required>
       </div>
       <div class="form-group col-md-6">
         <label for="inputPassword4">Email</label>

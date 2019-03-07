@@ -84,7 +84,7 @@ $filas=$resultado->fetch_assoc();
        </div>
       <div class="form-group col-md-6">
         <label for="inputPassword4">Goles</label>
-        <input type="number" name="gol" class="form-control" value="<?php echo $filas['goles'];?>">
+        <input type="number" min="0" max="50" name="gol" class="form-control" value="<?php echo $filas['goles'];?>">
       </div>
       <div class="form-group col-md-6">
         <label for="inputPassword4">Email</label>

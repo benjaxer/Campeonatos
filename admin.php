@@ -107,9 +107,9 @@ include("conexion.php");
                 <td>".$registros['tipocampeonato']."</td>
                 <td>".$registros['goles']."</td>
                 <td>".$registros['email']."</td>
-                <td><a href='editar.php?id=".$registros['Idcampeonato']."'<i class='fas fa-edit'></i>Editar</a>
+                <td><a href='editar.php?id=".$registros['Idcampeonato']."'<i class='fas fa-edit'></i></a>
                 &nbsp &nbsp &nbsp;
-                <a href='confirmar.php?id=".$registros['Idcampeonato']."'<i class='fas fa-trash' onclick='return ConfirmDelete()'></i>Eliminar</a></td>
+                <a href='confirmar.php?id=".$registros['Idcampeonato']."'<i class='fas fa-trash' onclick='return ConfirmDelete()'></i></a></td>
              </tr>";
           }
     ?>
