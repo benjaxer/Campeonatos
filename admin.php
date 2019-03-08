@@ -152,11 +152,21 @@ include("conexion.php");
 
   <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
 <script>
-$(document).ready(function() {
-    $('#example').DataTable();
+  $(document).ready(function() {
+    $('#example').DataTable( {
+        "language": {
+            "lengthMenu": "Tabla _MENU_ Entrada",
+            "zeroRecords": "Nothing found - sorry",
+            "info": "Mostrando _PAGE_ of _PAGES_",
+            "infoEmpty": "No records available",
+             "search": "Buscar:",
+            "infoFiltered": "(filtered from _MAX_ total records)"
+        }
+    } );
 } );
 </script>
 
 
 </body>
 </html>
+
