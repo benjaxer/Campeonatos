@@ -7,7 +7,7 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
     <title>Entrada</title>
-<link rel="stylesheet" type="text/css" href="CssLetras.css">
+<link rel="stylesheet" type="text/css">
 <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/carousel/">
     <!-- Bootstrap core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -110,9 +110,12 @@
 <?php require_once("piedepagina.php"); ?>
 </footer>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
 <script>window.jQuery || document.write('<script src="/docs/4.2/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+
 <script src="js/bootstrap.bundle.min.js"></script>
+
 <script type=”text/javascript” language=”javascript” src=”./media/js/jquery.js”></script>
-</body>
+  </body>
 </html>
 
