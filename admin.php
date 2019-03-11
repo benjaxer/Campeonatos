@@ -153,14 +153,9 @@ include("conexion.php");
   <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
 <script>
   $(document).ready(function() {
-    $('#example').DataTable( {
+    $('#example').dataTable( {
         "language": {
-            "lengthMenu": "Tabla _MENU_ Entrada",
-            "zeroRecords": "Nothing found - sorry",
-            "info": "Mostrando _PAGE_ of _PAGES_",
-            "infoEmpty": "No records available",
-             "search": "Buscar:",
-            "infoFiltered": "(filtered from _MAX_ total records)"
+            "url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"
         }
     } );
 } );
